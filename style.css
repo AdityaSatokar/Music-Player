@@ -15,7 +15,7 @@ body::-webkit-scrollbar{
 header{
     display: flex;
     flex-wrap: wrap;
-    width: 85%;
+    width: 85vw;
     height: 95vh;
 }
 
@@ -26,7 +26,9 @@ header .playlist{
     height: 90%;
     background: #111727;
     box-shadow: 5px 0px 2px #090f1f;
+    overflow: hidden;
     color: #fff;
+    transition: left 0.3s ease;
 }
 
 /* playlist nav */
@@ -95,9 +97,9 @@ header .playlist .queue .active i{
 }
 
 header .playlist .menu {
-    width: 100%;
-    height: 550px;
-    margin-top: 40px;
+    width: 21vw;
+    height: 58.5vh;
+    margin-top: 20px;
     overflow: auto;
 }
 
@@ -108,7 +110,7 @@ header .playlist .menu::-webkit-scrollbar{
 header .playlist .menu li{
     list-style: none;
     position: relative;
-    padding: 5px 0px 5px 20px;
+    padding: 0 1vw 0 0;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -121,27 +123,27 @@ header .playlist .menu li:hover{
 }
 
 header .playlist .menu li img{
-    height: 50px;
-    width: 50px;
+    height: auto;
+    width: 3vw;
     margin-left: 25px;
 }
 
 header .playlist .menu li h5{
-    font-size: 15px;
+    font-size: 0.8vw;
     margin-left: 15px;
-    width: 170px;
+    width: 9vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 header .playlist .menu li h5 .subtitle{
-    font-size: 11px;
+    font-size: 0.6vw;
     color: #4c5262;
 }
 
 header .playlist .menu li i{
-    margin-left: 80px;
+    margin-left: 4vw;
 }
 
 /* ----master-play---- */
@@ -157,8 +159,8 @@ header .master-play{
 }
 
 header .master-play .wave{
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 4vh;
     padding-bottom: 5px;
     display: flex;
     align-items: flex-end;
@@ -166,8 +168,8 @@ header .master-play .wave{
 }
 
 header .master-play .wave .waves{
-    width: 5px;
-    height: 10px;
+    width: 0.3vw;
+    height: 1vh;
     background: #36e2ec;
     margin-right: 3px;
     border-radius: 10px 10px 0px 0px;
@@ -176,19 +178,19 @@ header .master-play .wave .waves{
     margin: 0px 0px 5px 5px;
 }
 
-/* -----javascript class----- */
+/* -----wave javascript class----- */
 
 header .master-play .active .waves{
     animation: waves 0.5s linear infinite;
 }
 
 header .master-play .active .waves:nth-child(2){
-    height: 13px;
+    height: 1vh;
     animation-delay: 0.4s;
 }
 
 header .master-play .active .waves:nth-child(3){
-    height: 8px;
+    height: 1vh;
     animation-delay: 0.8s;
 }
 
@@ -205,24 +207,24 @@ header .master-play .active .waves:nth-child(3){
 }
 
 header .master-play img{
-    width: 50px;
-    height: 50px;
+    width: 2.5vw;
+    height: auto;
     margin: 0px 10px 0px 10px;
 }
 
 header .master-play h5{
-    width: 130px;
+    width: 6.5vw;
     color: #fff;
     margin-left: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 20px;
+    font-size: 1vw;
 }
 
 header .master-play h5 .subtitle{
-    width: 130px;
-    font-size: 15px;
+    width: 6vw;
+    font-size: 0.7vw;
     color: #4c5262;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -231,7 +233,7 @@ header .master-play h5 .subtitle{
 
 header .master-play .icon{
     height: auto;
-    width: 150px;
+    width: 7.5vw;
     color: #fff;
     font-size: 20px;
     margin: 0px 20px 0px 20px;
@@ -243,14 +245,15 @@ header .master-play .icon{
 header .master-play .icon i{
     cursor: pointer;
     outline: none;
+    font-size: 1vw;
 }
 
 header .master-play #timestart{
     color: #fff;
-    width: 45px;
+    width: 2.5vw;
     font-size: 16px;
     font-weight: 400;
-    margin: 0px 0px 0px 20px;
+    margin: 0px 10px 0px 20px;
 }
 
 header .master-play .bar{
@@ -431,36 +434,6 @@ header .song nav .search{
     cursor: text;
 }
 
-header .song nav .search .search-results .card{
-    width: 100%;
-    min-height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(0, 0, 0, 0.5);
-    margin-bottom: 5px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-header .song nav .search .search-results .card img{
-    width: 60px;
-    height: 60px;
-}
-
-header .song nav .search .search-results .card .content{
-    width: 80%;
-    height: 100%;
-    font-size: 18px;
-    font-weight: 600px;
-    color: white;
-}
-
-header .song nav .search .search-results .card .content .subtitle{
-    font-size: 10px;
-    color: #a4a8b4;
-}
-
 header .song nav .search::before{
     content: '';
     position: absolute;
@@ -491,8 +464,8 @@ header .song nav .search input{
 header .song nav .user{
     position: relative;
     border-radius: 50%;
-    height: 70px;
-    width: 70px;
+    height: 6.5vh;
+    width: 3.5vw;
 }
 
 header .song nav .user img{
@@ -518,8 +491,8 @@ header .song nav .user #dropdown:target{
     margin-top: 70px;
     margin-left: -150px;
     background: #111727;
-    width: 200px;
-    height: 250px;
+    width: 12vw;
+    height: 30vh;
     border-radius: 10px;
     border: 3px solid #36e2ec;
     z-index: 1;
@@ -539,7 +512,7 @@ header .song nav .user #dropdown a:hover i{
 }
 
 header .song nav .user #dropdown span{
-    font-size: 25px;
+    font-size: 1.1vw;
     cursor: pointer;
     transition: 0.5S linear;
     color: #4c5262;
@@ -556,13 +529,15 @@ header .song nav .user #dropdown span:hover{
 header .song .banner{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
-    height: 300px;
+    height: 32vh;
 }
 
 header .song .banner img{
-    height: 100%;
-    width: 300px;
+    height: auto;
+    width: 15.8vw;
+    max-width: 260px;
     border-radius: 20px;
     transition: 0.5s ease-in-out;
     cursor: pointer;
@@ -575,7 +550,7 @@ header .song .banner img:hover{
 
 /* popular songs */
 header .song .popular-songs{
-    width: 1100px;
+    width: 58vw;
     height: auto;
     margin: auto;
     margin-top: 25px;
@@ -680,7 +655,7 @@ header .song .popular-songs .popular-song .song-item h5 .subtitle{
 
 /* popular artists */
 header .song .popular-artists{
-    width: 1100px;
+    width: 58vw;
     height: auto;
     margin: auto;
     margin-top: 25px;
@@ -843,7 +818,7 @@ header .song .latest-release .list li span div{
 
 header .song .genres{
     width: 100%;
-    height: 500px;
+    height: auto;
     position: relative;
     padding: 50px 0px 0px 0px;
     display: flex;
@@ -852,8 +827,9 @@ header .song .genres{
 }
 
 header .song .genres img{
-    width: 350px;
-    height: 200px;
+    width: 18vw;
+    height: auto;
+    margin: 1vw 1vw 1vw 1vw;
     border-radius: 20px;
     transition: 0.5s ease-in-out;
     cursor: pointer;
@@ -865,7 +841,7 @@ header .song .genres img:hover {
 
 /* latest english */
 header .song .latest-english{
-    width: 1100px;
+    width: 58vw;
     height: auto;
     margin: auto;
     margin-top: 25px;
@@ -967,3 +943,288 @@ header .song .latest-english .english-song .song-item h5 .subtitle{
     text-overflow: ellipsis;
     white-space: nowrap;
 }  
+
+/* ========== Media queries for large screens (desktops and laptops) ========== */
+@media screen and (max-width: 1280px) {
+    header .song .banner img{
+        height: auto;
+        width: 17vw;
+    }
+
+    header .playlist .menu li img{
+        height: auto;
+        width: 5vw;
+    }
+
+    header .playlist .menu li h5{
+        font-size: 1vw;
+    }
+    
+    header .playlist .menu li h5 .subtitle{
+        font-size: 0.8vw;
+    }
+    
+    header .song .latest-release .list li{
+        height: 180px;
+        width: 350px;
+    }
+    
+    header .song .latest-release .list li img{
+        height: 180px;
+        width: 180px;
+    }
+    
+    header .song .latest-release .list li h5{
+        font-size: 12px;
+    }
+    
+    header .song .latest-release .list li h5 .subtitle{
+        font-size: 8px;
+    }
+
+    header .song nav .user{
+        height: 4vh;
+        width: 3vw;
+    }
+
+    header .master-play img{
+        width: 4vw;
+        height: auto;
+    }
+    
+    header .master-play h5{
+        width: 7vw;
+        font-size: 1.3vw;
+    }
+    
+    header .master-play h5 .subtitle{
+        width: 6vw;
+        font-size: 1vw;
+    }
+
+    header .master-play .icon{
+        height: auto;
+        width: 14vw;
+    }
+    
+    header .master-play .icon i{
+        font-size: 1.3vw;
+    }
+    
+    header .master-play #timestart{
+        margin-right: 2vw;
+    }
+}
+
+/* ========== Media queries for tablets and smaller laptops ========== */
+@media screen and (max-width: 1024px) {
+    header .song .banner img{
+        height: auto;
+        width: 18vw;
+    }
+
+    header .playlist .menu li img{
+        height: auto;
+        width: 6vw;
+    }
+
+    header .playlist .menu li h5{
+        font-size: 1.3vw;
+    }
+    
+    header .playlist .menu li h5 .subtitle{
+        font-size: 1vw;
+    }
+    
+    header .song .latest-release .list li{
+        height: 150px;
+        width: 270px;
+    }
+    
+    header .song .latest-release .list li img{
+        height: 150px;
+        width: 150px;
+    }
+    
+    header .song .latest-release .list li h5{
+        font-size: 10px;
+    }
+    
+    header .song .latest-release .list li h5 .subtitle{
+        font-size: 8px;
+    }
+
+    header .song .latest-release .list li span{
+        margin-left: 20px;
+    }
+
+    header .song nav .user{
+        height: 4vh;
+        width: 3vw;
+    }
+
+    header .master-play img{
+        width: 4vw;
+        height: auto;
+    }
+    
+    header .master-play h5{
+        width: 7vw;
+        font-size: 1.3vw;
+    }
+    
+    header .master-play h5 .subtitle{
+        width: 6vw;
+        font-size: 1vw;
+    }
+
+    header .master-play .icon{
+        height: auto;
+        width: 14vw;
+    }
+    
+    header .master-play .icon i{
+        font-size: 1.3vw;
+    }
+    
+    header .master-play #timestart{
+        margin-right: 2vw;
+    }
+}
+
+/* ========== Media queries for small tablets and large phones ========== */
+@media screen and (max-width: 768px) {
+    body{
+        overflow: hidden;
+        background-color: #0b1320;
+    }
+
+    header{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    header .playlist{
+        position: absolute;
+        z-index: 1;
+        width: 50%;
+        left: -50%;
+    }
+
+    header .playlist .menu {
+        width: 95%;
+    }
+
+    header .playlist .menu li{
+        width: 100%;
+    }
+
+    header .playlist .menu li img{
+        height: auto;
+        width: 9vw;
+    }
+
+    header .playlist .menu li h5{
+        font-size: 2vw;
+    }
+    
+    header .playlist .menu li h5 .subtitle{
+        font-size: 1.5vw;
+    }
+
+    header .playlist .menu li i{
+        margin-left: 20vw;
+    }
+
+    header .song{
+        width: 100%;
+        height: 90%;
+    }
+
+    header .song nav .user{
+        height: 5vh;
+        width: 5vw;
+    }
+
+    header .song .banner img{
+        height: auto;
+        width: 27vw;
+    }
+
+    header .song .popular-songs{
+        width: 100vw;
+    }
+
+    header .song .popular-artists{
+        width: 100vw;
+    }
+
+    header .song .latest-release .list li{
+        height: 300px;
+        width: 600px;
+    }
+    
+    header .song .latest-release .list li img{
+        height: 300px;
+        width: 300px;
+    }
+    
+    header .song .latest-release .list li h5{
+        font-size: 20px;
+    }
+    
+    header .song .latest-release .list li h5 .subtitle{
+        font-size: 12px;
+    }
+
+    header .song .genres img{
+        width: 80vw;
+        height: auto;
+    }
+
+    header .song .latest-english{
+        width: 100vw;
+    }
+
+    header .master-play .wave{
+        width: 10vw;
+        height: 4vh;
+    }
+    
+    header .master-play .wave .waves{
+        width: 0.5vw;
+    }
+
+    header .master-play img{
+        width: 7vw;
+        height: auto;
+    }
+    
+    header .master-play h5{
+        width: 15vw;
+        font-size: 2vw;
+    }
+    
+    header .master-play h5 .subtitle{
+        width: 6vw;
+        font-size: 1.5vw;
+    }
+
+    header .master-play .icon{
+        height: auto;
+        width: 25vw;
+    }
+    
+    header .master-play .icon i{
+        font-size: 1.7vw;
+    }
+    
+    header .master-play #timestart{
+        margin-right: 6vw;
+    }
+}
+
+/* ========== Media queries for mobile phones ========== */
+@media screen and (max-width: 480px) {
+  /* Styles for screens up to 480px wide */
+}
