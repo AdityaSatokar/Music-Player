@@ -1226,5 +1226,28 @@ header .song .latest-english .english-song .song-item h5 .subtitle{
 
 /* ========== Media queries for mobile phones ========== */
 @media screen and (max-width: 480px) {
-  /* Styles for screens up to 480px wide */
+  header .master-play .wave{
+        display: none;
+    }
+
+    header .master-play img{
+        display: none;
+    }
+
+    header .master-play h5{
+        display: none;
+    }
+    
+    header .master-play h5 .subtitle{
+        display: none;
+    }
+
+    header .master-play .icon{
+        height: auto;
+        width: 70vw;
+    }
+    
+    header .master-play .icon i{
+        font-size: 2.7vw;
+    }
 }
