@@ -338,3 +338,14 @@ english_song_right.addEventListener('click',()=>{
 english_song_left.addEventListener('click',()=>{
     english_song.scrollLeft -= 330;
 });
+
+let librarybtn = document.getElementById("library");
+librarybtn.addEventListener("click", () => {
+    let playlist = document.querySelector(".playlist");
+    playlist.style.left = "0";
+});
+
+let playlist = document.querySelector(".playlist");
+playlist.addEventListener("click",()=>{
+    playlist.style.left = "-50%";
+})
